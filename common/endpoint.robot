@@ -14,3 +14,9 @@ Get SE endpoint
     ${se_cfg}   Get SE config   ${se_alias}
     ${sa_path}   Get From Dictionary   ${se_cfg.paths}   ${sa}
     [Return]   ${se_cfg.endpoint}${sa_path}
+
+Get SE endpoint path
+    [Arguments]   ${se_alias}   ${sa}=wlcg
+    ${se_cfg}   Get SE config   ${se_alias}
+    ${sa_path}   Get From Dictionary   ${se_cfg.paths}   ${sa}
+    [Return]   ${sa_path}
